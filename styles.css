@@ -76,6 +76,15 @@ a {
     text-align: center;
 	}
 
+  .content p {
+    font-size: xx-small;
+    width: 90%;
+  }
+
+  .content .hero-icons {
+    font-size: xx-small;
+  }
+
   .grid-container .projects {
     grid-template-columns: 1fr;
     grid-template-rows: auto repeat(4, 1fr);
@@ -97,6 +106,20 @@ a {
         "links links";
   }
   
+  .project-card .project-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .project-card .project-name h5 {
+    font-size: large;
+  }
+
+  .project-card .project-pic img {
+    width: 50%;
+  }
+
   .contact {
     width: 100vw;
   }
@@ -122,6 +145,11 @@ a {
   justify-content: space-around;
   align-items: center;
 
+}
+
+.navbar .logo img {
+  height: 12%;
+  width: 15%;
 }
 
 .navbar ul {
@@ -169,12 +197,12 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  align-items: center;
 
   color: var(--main-color);
 
   height: 100%;
-  width: 100%;
+  width: 100vw;
 }
 
 .hero h1 {
@@ -182,8 +210,17 @@ a {
 }
 
 .hero p {
-  margin: 1.2rem 0 1.2rem 0;
+  margin: 1.2rem 10rem 1.2rem 10rem;
   font-size: medium;
+  text-align: center;
+}
+
+.content p > a {
+  color: var(--hover-color);
+}
+
+.content p > a:hover {
+  color: var(--main-color);
 }
 
 .hero-icons {
@@ -199,7 +236,7 @@ a {
 }
 
 .hero-icons > a:hover {
-  color: #ff8d73;
+  color: var(--hover-color);
   cursor: pointer;
 }
 
@@ -248,7 +285,7 @@ a {
   grid-template-areas:
       "pic name name links"
       "pic desc desc desc"
-      "pic tech tech tech";
+      "tech tech tech tech";
   gap: .5rem;
 
   color: var(--main-color);
@@ -263,6 +300,10 @@ a {
   box-shadow: 7px 7px 4px 1px rgba(0,0,0,0.35);
 }
 
+.project-card img {
+  width: 100%
+}
+
 .project-card:hover {
   background-color: var(--main-color);
   color: black;
@@ -270,6 +311,9 @@ a {
 
 .project-pic {
   grid-area: pic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .project-name {
@@ -369,7 +413,7 @@ a {
   width: 100px;
   background-image: linear-gradient(45deg, var(--hover-color) 0%, orangered 100%);
   border-radius: 6px;
-  border: 1px solid lightgray;
+  border: 1px solid var(--hover-color);
   margin-bottom: 1rem;
   cursor: pointer;
 
@@ -378,6 +422,7 @@ a {
 }
 
 .contact-form button:hover {
+  background-image: none;
   background-color: var(--hover-color);
 }
 
