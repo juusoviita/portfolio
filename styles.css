@@ -393,8 +393,13 @@ a {
   height: 90px;
 }
 
+.footer .bottom {
+  display: flex;
+  flex-direction: column;
+}
+
 .footer .bottom p {
-  font-size: small;
+  font-size: x-small;
   color: grey;
 }
 
