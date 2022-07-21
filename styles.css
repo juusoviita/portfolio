@@ -70,12 +70,17 @@ a {
     text-align: center;
 	}
 
-  .navbar > ul > li {
-    margin-left: .5rem;
-    font-size: small;
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .content p {
+  .navbar > .nav {
+    display: none;
+  }
+
+  .hero .content > p {
     font-size: xx-small;
     width: 90%;
   }
@@ -149,7 +154,7 @@ a {
 
 .navbar .logo img {
   height: 90px;
-  width: 130px;
+  width: 90px;
 }
 
 .navbar ul {
